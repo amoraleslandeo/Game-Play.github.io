@@ -1,0 +1,12 @@
+@import "variables";
+@import "general";
+
+.container {
+    align-items: center;
+    justify-content: center;
+    
+    .splash {
+        width: 180px;
+        height: 132px;
+    }
+}
