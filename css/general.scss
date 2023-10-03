@@ -9,7 +9,7 @@ body {
 
     .container {
         width: 100%;
-        height: 100vh;
+        height: fit-content;
         background: linear-gradient(180deg, #0e1647 0%, #0a1033 100%);
         display: flex;
     }

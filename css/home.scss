@@ -1,0 +1,229 @@
+@import "variables";
+@import "general";
+
+.container {
+    flex-direction: column;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 24px;
+        margin-top: 9px;
+
+        .avatar {
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #243189;
+            width: 48px;
+            line-height: 0;
+            overflow: hidden;
+            background: $secundary;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .player_name {
+            display: flex;
+            flex-direction: column;
+            margin-left: 21px;
+            margin-right: 87px;
+
+            h1 {
+                font-family: "Rajdhani";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: $third;
+                margin: 0px;
+            }
+
+            span {
+                font-family: "Inter";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 17px;
+                color: $third_2;
+                margin: 0px;
+            }
+        }
+
+        .plus_btn {
+            border-radius: 8px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: $secundary;
+            width: 48px;
+            height: 48px;
+            background: $secundary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+
+        .categories {
+            display: flex;
+            align-items: center;
+            margin-top: 39px;
+            gap: 8px;
+            margin-left: 24px;
+            margin-bottom: 40px;
+
+            .item_category {
+                display: flex;
+                flex-direction: column;
+                width: 104px;
+                height: 120px;
+                border-radius: 8px;
+                border: 1px solid #243189;
+                background: linear-gradient(0deg, #1d2766 0%, #171f52 100%);
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+
+                img {
+                    width: auto;
+                    height: 48px;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    text-align: center;
+                    font-family: "Rajdhani";
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    color: $third;
+                    margin: 0px;
+                }
+            }
+        }
+
+        .list {
+            overflow: hidden;
+
+            .list_header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 24px;
+                margin-top: 0px;
+
+                .title_list {
+                    font-family: "Rajdhani";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    color: $third;
+                    margin: 0px;
+                }
+
+                .total_list {
+                    text-align: right;
+                    font-family: "Inter";
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 17px;
+                    color: $third_2;
+                    margin: 0px;
+                }
+            }
+        }
+
+        .list_items {
+            .item_list {
+                display: flex;
+                text-decoration: none;
+                margin-left: 24px;
+                margin-right: 24px;
+                gap: 20px;
+                align-items: center;
+                justify-content: space-between;
+                font-family: "Inter";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 17px;
+                color: $third_2;
+                padding-bottom: 16px;
+
+                .game_img {
+                    width: auto;
+                    height: 68px;
+                }
+
+                .center_text {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    h2 {
+                        font-family: "Rajdhani";
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: normal;
+                        color: $third;
+                        margin: 0px;
+                        margin-bottom: 4px;
+                    }
+
+                    span {
+                        margin-bottom: 8px;
+                    }
+
+                    .calendar {
+                        display: flex;
+                        align-items: center;
+
+                        .major_width {
+                            font-weight: 500;
+                            color: $third;
+                            margin: 0px;
+                            margin-left: 12px;
+                        }
+                    }
+                }
+
+                .right_text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    .man {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 32px;
+
+                        .major_width {
+                            font-weight: 500;
+                            color: $third;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+            }
+            .line {
+                right: -108px;
+                position: relative;
+                background: linear-gradient(270deg, #1d2766 0%, #171f52 100%);
+                width: 100%;
+                height: 1px;
+                margin-right: 108px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
