@@ -9,8 +9,10 @@ body {
 
     .container {
         width: 100%;
-        height: fit-content;
+        height: 100vh;
         background: linear-gradient(180deg, #0e1647 0%, #0a1033 100%);
         display: flex;
     }
 }
+
+
