@@ -3,6 +3,7 @@
 
 .container {
     flex-direction: column;
+    position: relative;
 
     .bar_status {
         display: flex;
@@ -138,64 +139,64 @@
                 flex-direction: row;
                 gap: 15px;
 
-            .date_btn {
-                display: flex;
-                flex-direction: column;
-                
-                label {
-                    font-family: "Rajdhani";
-                    font-size: 18px;
-                    font-weight: 700;
-                    color: $third;
-                    margin: 0px;
-                    margin-bottom: 12px;
+                .date_btn {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-family: "Rajdhani";
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $third;
+                        margin: 0px;
+                        margin-bottom: 12px;
+                    }
+
+                    input[type="text"] {
+                        font-family: "Inter";
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        color: $third_2;
+                        margin: 0px;
+                        padding-left: 16px;
+                        width: 156px;
+                        height: 48px;
+                        border-radius: 8px;
+                        border: 1px solid #243189;
+                        background: linear-gradient(0deg, #1d2766 0%, #171f52 100%);
+                    }
                 }
 
-                input[type="text"] {
-                    font-family: "Inter";
-                    font-size: 13px;
-                    font-weight: 400;
-                    line-height: 17px;
-                    color: $third_2;
-                    margin: 0px;
-                    padding-left: 16px;
-                    width: 156px;
-                    height: 48px;
-                    border-radius: 8px;
-                    border: 1px solid #243189;
-                    background: linear-gradient(0deg, #1d2766 0%, #171f52 100%);
+                .hour_btn {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-family: "Rajdhani";
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $third;
+                        margin: 0px;
+                        margin-bottom: 12px;
+                    }
+
+                    input {
+                        font-family: "Inter";
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        color: $third_2;
+                        margin: 0px;
+                        padding-left: 16px;
+                        width: 156px;
+                        height: 48px;
+                        border-radius: 8px;
+                        border: 1px solid #243189;
+                        background: var(--shapes-boxes, linear-gradient(0deg, #1d2766 0%, #171f52 100%));
+                    }
                 }
             }
-
-            .hour_btn {
-                display: flex;
-                flex-direction: column;
-
-                label {
-                    font-family: "Rajdhani";
-                    font-size: 18px;
-                    font-weight: 700;
-                    color: $third;
-                    margin: 0px;
-                    margin-bottom: 12px;
-                }
-
-                input {
-                    font-family: "Inter";
-                    font-size: 13px;
-                    font-weight: 400;
-                    line-height: 17px;
-                    color: $third_2;
-                    margin: 0px;
-                    padding-left: 16px;
-                    width: 156px;
-                    height: 48px;
-                    border-radius: 8px;
-                    border: 1px solid #243189;
-                    background: var(--shapes-boxes, linear-gradient(0deg, #1d2766 0%, #171f52 100%));
-                }
-            }
-        }
             .textarea {
                 display: flex;
                 align-items: center;
@@ -209,7 +210,6 @@
                     font-weight: 700;
                     color: $third;
                     margin: 0px;
-
                 }
                 span {
                     font-family: "Inter";
@@ -219,7 +219,6 @@
                     color: $third_2;
                     margin: 0px;
                 }
-
             }
             textarea {
                 width: 100%;
@@ -257,5 +256,119 @@
                 text-align: center;
             }
         }
+    }
+
+    .modal {
+        flex-direction: row;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        height: 100%;
+
+        .background_opacity {
+            opacity: 0.7;
+            background-color: #000;
+            height: 100%;
+            top: 0;
+            padding: 0px;
+        }
+        .footer {
+            z-index: 2;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 24px;
+            padding-bottom: 6px;
+            background: linear-gradient(180deg, #0e1647 0%, #0a1033 100%);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            .text_modal {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                .text_regular {
+                    color: $third;
+                    font-family: "Rajdhani";
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                .text_bold {
+                    color: $third;
+                    font-family: "Rajdhani";
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                .text_red {
+                    color: $secundary;
+                    font-family: "Rajdhani";
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+            .button_modal {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 23px;
+                margin-bottom: 6px;
+
+                .button_left {
+                    border: 1px solid;
+                    border-color: #495bcc;
+                    border-radius: 8px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                        font-family: "Inter";
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        color: $third;
+                        text-align: center;
+                    }
+                }
+                .button_right {
+                    border: 1px solid;
+                    border-color: $secundary;
+                    border-radius: 8px;
+                    background-color: $secundary;
+                    text-decoration: none;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                        font-family: "Inter";
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 25px;
+                        color: $third;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .mostrar {
+        display: block;
+    }
+    .ocultar {
+        display: none;
     }
 }

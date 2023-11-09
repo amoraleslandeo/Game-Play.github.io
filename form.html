@@ -35,7 +35,7 @@
             </div>
         </header>
         <main>
-            <a href="./servidor_screen.html" target="_blank">
+            <a href="./servidor_screen.html">
                 <div class="server_selection">&nbsp;</div>
                 <p>Selecione um servidor</p>
                 <div class="major"><img src="./image/major_direction.svg" alt="major" /></div>
@@ -56,12 +56,45 @@
                     <span>Max 100 caracteres</span>
                 </div>
                 <textarea id="description" name="description"></textarea>
-                </form>
+            </form>
         </main>
         <footer>
-            <a href="#" target="_blank">
+            <a href="javascript:void()" onClick="javascript:mostrar()">
                 <span>Agendar</span>
             </a>
         </footer>
+        <div id="modal" class="ocultar modal">
+            <div class="background_opacity">&nbsp;</div>
+            <div class="footer">
+                <div class="text_modal">
+                    <span class="text_regular">Deseja sair do&nbsp;</span>
+                    <span class="text_bold">Game</span>
+                    <span class="text_red">Play</span>
+                    <span class="text_bold">?</span>
+                </div>
+                <div class="button_modal">
+                    <div class="button_left"><a href="javascript:void()" onClick="javascript:ocultar()">
+                            Não
+                        </a>
+                    </div>
+                    <div class="button_right"><a href="./home.html">
+                            Sim
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        function mostrar() {
+            var element = document.getElementById("modal");
+            element.classList.add("mostrar");
+            element.classList.remove("ocultar");
+        }
+        function ocultar() {
+            var element = document.getElementById("modal");
+            element.classList.add("ocultar");
+            element.classList.remove("mostrar");
+        }
+    </script>
 </body>
